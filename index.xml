@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="BSK Reaper Scripts">
+  <category name="Transport">
+    <reapack name="BSK_Transport_Play.lua" type="script" desc="BSK Transport: Play">
+      <metadata>
+        <description><![CDATA[Starts playback only if stopped or paused. Does nothing if already playing or recording. Safe for Stream Deck transport buttons.]]></description>
+      </metadata>
+      <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Play.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BSK_Transport_Pause.lua" type="script" desc="BSK Transport: Pause">
+      <metadata>
+        <description><![CDATA[Pauses if playing, unpauses if paused. Does nothing if stopped or recording. Safe for Stream Deck transport buttons.]]></description>
+      </metadata>
+      <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Pause.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BSK_Transport_Record.lua" type="script" desc="BSK Transport: Record">
+      <metadata>
+        <description><![CDATA[Starts recording only if not already recording. Safe for Stream Deck transport buttons.]]></description>
+      </metadata>
+      <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Record.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="AutoPatch">
+    <reapack name="BSK_AutoPatch_HW_1to1_Mono.lua" type="script" desc="BSK AutoPatch: HW 1-to-1 Mono">
+      <metadata>
+        <description><![CDATA[Patches all tracks 1:1 to mono hardware inputs and outputs. Sets pre-FX sends at unity gain, disables master send and monitoring. Shows a summary when done.]]></description>
+      </metadata>
+      <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_1to1_Mono.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BSK_AutoPatch_HW_Teardown.lua" type="script" desc="BSK AutoPatch: HW Teardown">
+      <metadata>
+        <description><![CDATA[Removes all hardware sends and restores master send and monitoring on every track. Undo for AutoPatch.]]></description>
+      </metadata>
+      <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_Teardown.lua</source>
+      </version>
+    </reapack>
+  </category>
+</index>
