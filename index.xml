@@ -29,9 +29,13 @@
   <category name="AutoPatch">
     <reapack name="BSK_AutoPatch_HW_1to1_Mono.lua" type="script" desc="BSK AutoPatch: HW 1-to-1 Mono">
       <metadata>
-        <description><![CDATA[Patches all tracks 1:1 to mono hardware inputs and outputs. Sets pre-FX sends at unity gain, disables master send and monitoring. Shows a summary when done.]]></description>
+        <description><![CDATA[Patches all tracks 1:1 to mono hardware inputs and outputs. Sets pre-FX sends at unity gain, disables master send and monitoring. Shows a summary when done. Mono tracks only. A stereo source needs two mono tracks (left and right).]]></description>
       </metadata>
       <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_1to1_Mono.lua</source>
+      </version>
+      <version name="1.1" author="BSK Apps" time="2026-06-15T00:11:07Z">
+        <changelog><![CDATA[Added a confirmation prompt at start: mono tracks only. A stereo track patches one channel, not both.]]></changelog>
         <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_1to1_Mono.lua</source>
       </version>
     </reapack>
