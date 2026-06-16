@@ -10,4 +10,6 @@ Note on stereo: AutoPatch treats every track as mono and maps track 1 to channel
 
 The teardown script resets all tracks to unassigned inputs and outputs.
 
-The Play/Pause/Rec Transport safe scripts all ignore their main function when recording, so only stop will end a recording. They will function as play/pause/rec normally. For use with Stream Deck buttons
+The Safe Rec Play/Pause/Rec Transport scripts all ignore their main function when recording, so only stop will end a recording. They will function as play/pause/rec normally. For use with Stream Deck buttons.
+
+Import Track Names reads a CSV or text file and names your tracks from it. It handles sectioned console exports (dLive, Avantis, SQ), standard CSV (Yamaha CL, QL, Rivage) and plain text, and asks whether to rename existing tracks or create new ones.

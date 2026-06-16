@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="BSK Reaper Scripts">
   <category name="Transport">
-    <reapack name="BSK_Transport_Play.lua" type="script" desc="BSK Transport: Play">
+    <reapack name="BSK_Transport_Safe_Rec_Play.lua" type="script" desc="BSK Transport: Safe Rec Play">
       <metadata>
         <description><![CDATA[Starts playback only if stopped or paused. Does nothing if already playing or recording. Safe for Stream Deck transport buttons.]]></description>
       </metadata>
-      <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
-        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Play.lua</source>
+      <version name="1.0" author="BSK Apps" time="2026-06-16T10:50:09Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Safe_Rec_Play.lua</source>
       </version>
     </reapack>
-    <reapack name="BSK_Transport_Pause.lua" type="script" desc="BSK Transport: Pause">
+    <reapack name="BSK_Transport_Safe_Rec_Pause.lua" type="script" desc="BSK Transport: Safe Rec Pause">
       <metadata>
         <description><![CDATA[Pauses if playing, unpauses if paused. Does nothing if stopped or recording. Safe for Stream Deck transport buttons.]]></description>
       </metadata>
-      <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
-        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Pause.lua</source>
+      <version name="1.0" author="BSK Apps" time="2026-06-16T10:50:09Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Safe_Rec_Pause.lua</source>
       </version>
     </reapack>
-    <reapack name="BSK_Transport_Record.lua" type="script" desc="BSK Transport: Record">
+    <reapack name="BSK_Transport_Safe_Rec_Record.lua" type="script" desc="BSK Transport: Safe Rec Record">
       <metadata>
         <description><![CDATA[Starts recording only if not already recording. Safe for Stream Deck transport buttons.]]></description>
       </metadata>
-      <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
-        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Record.lua</source>
+      <version name="1.0" author="BSK Apps" time="2026-06-16T10:50:09Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Safe_Rec_Record.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Track Names">
+    <reapack name="BSK_Import_Track_Names.lua" type="script" desc="BSK Import Track Names">
+      <metadata>
+        <description><![CDATA[Imports track names from a CSV or text file. Handles sectioned console exports (dLive, Avantis, SQ), standard CSV (Yamaha CL, QL, Rivage) and plain text. On run it asks whether to rename existing tracks or create new ones.]]></description>
+      </metadata>
+      <version name="1.0" author="BSK Apps" time="2026-06-16T10:50:09Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Import_Track_Names.lua</source>
       </version>
     </reapack>
   </category>
