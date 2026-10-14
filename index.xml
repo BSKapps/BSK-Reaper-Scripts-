@@ -48,6 +48,11 @@
         <changelog><![CDATA[Added a confirmation prompt at start: mono tracks only. A stereo track patches one channel, not both.]]></changelog>
         <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_1to1_Mono.lua</source>
       </version>
+      <version name="1.2" author="BSK Apps" time="2026-10-14T23:29:28Z">
+        <changelog><![CDATA[Fixed: each track's hardware output now goes to its own single output. Before, it also spilled into the next output, so output 2 carried tracks 1 and 2.
+While recording, it now refuses to run instead of repatching tracks mid-show.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_1to1_Mono.lua</source>
+      </version>
     </reapack>
     <reapack name="BSK_AutoPatch_HW_Teardown.lua" type="script" desc="BSK AutoPatch: HW Teardown">
       <metadata>
