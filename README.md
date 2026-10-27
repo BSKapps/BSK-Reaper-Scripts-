@@ -1,15 +1,25 @@
-REAPER scripts to make virtual soundcheck and live multitrack record sessions faster to setup.
+REAPER scripts for virtual soundcheck and live multitrack recording. Mac tested, untested on Windows.
 
-In actions menu make new ReaScript, paste this in and hit cmd+s to save. Add the action to a toolbar button or keyboard shortcut for quick access or run from actions menu when needed.
+Install with ReaPack: Extensions > ReaPack > Import a repository, paste `https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/index.xml`, then Browse packages. Or download a script, then in the Actions list use New action > Load ReaScript.
 
-Auto patch sees how many tracks you have and makes each one mono input and mono output to the matching hardware. eg dante DVS standard licence will patch 64 tracks in/out to your DVS.
+The full live recording setup (toolbars, lights, SAFE REC, REC TIME LEFT, templates and theme) is a free download at https://bskapps.com/tools/reaper/
 
-Just insert multitracks in REAPER and hit autopatch. It will skip any tracks that don't fit to the hardware in/out count and pop up a confirmation message to show what it has done. So track 1/ Input 1/ Output 1. It also sets sends prefade/premute/prefx and disables record monitoring and master sends.
+## AutoPatch
 
-Note on stereo: AutoPatch treats every track as mono and maps track 1 to channel 1, track 2 to channel 2 and so on. If you record a stereo source like overheads or keys, put it on two mono tracks (left and right on their own tracks). A single stereo track only grabs one channel and pushes every track below it out of line.
+- **AutoPatch HW 1-to-1 Mono and Stereo**: patches every track 1:1 to hardware inputs and outputs. Set a track's input to stereo first and it takes the next pair; the tracks after it move along. Tracks past what your interface has come out blank (no input or output), so nothing doubles up, and a stereo one comes back stereo on a bigger interface.
+- **AutoPatch HW 1-to-1 Mono**: the same, every track mono.
+- **AutoRoute HW Pre FX**: for every track with a hardware output: outputs pre FX and pre fader, record monitoring off, master send off. Run it after AutoPatch for virtual soundcheck.
+- **AutoPatch HW Teardown**: asks first, then removes every track's hardware inputs and outputs and turns master send and record monitoring back on.
+- **Reset Volume, Pan and Outputs**: asks first, then faders to 0 dB, pan to centre, every hardware output to 0 dB and centre, every item and take to 0 dB. Needs the SWS extension.
 
-The teardown script resets all tracks to unassigned inputs and outputs.
+## Track names and colours
 
-The Safe Rec Play/Pause/Rec Transport scripts all ignore their main function when recording, so only stop will end a recording. They will function as play/pause/rec normally. For use with Stream Deck buttons.
+- **Import Track Names**: names your tracks from a CSV or text file: sectioned console exports (dLive, Avantis, SQ), standard CSV (Yamaha CL, QL, Rivage) or one name per line. Shows the names before it changes anything.
+- **Auto-name Tracks from Device Inputs**: names each track from the input label your interface reports. Shows the names first.
+- **Auto Color**: colours (and optionally icons) tracks by words in their names. Edit the groups to suit your desk.
 
-Import Track Names reads a CSV or text file and names your tracks from it. It handles sectioned console exports (dLive, Avantis, SQ), standard CSV (Yamaha CL, QL, Rivage) and plain text, and asks whether to rename existing tracks or create new ones.
+## Transport (for Stream Deck)
+
+- **Safe Rec Play**: starts playback only if stopped or paused, never while recording.
+- **Safe Rec Pause**: pauses if playing and unpauses if paused (including a paused recording). Never pauses an active recording.
+- **Safe Rec Record**: starts recording only if not already recording, then unselects every track so a fader or mute you touch mid-show moves only that track.

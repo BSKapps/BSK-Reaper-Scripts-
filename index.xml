@@ -8,6 +8,11 @@
       <version name="1.0" author="BSK Apps" time="2026-06-16T10:50:09Z">
         <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Safe_Rec_Play.lua</source>
       </version>
+      <version name="1.1" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[Says why it cannot play when the audio device is not running, instead of doing nothing.
+Pressing it again while it runs no longer asks whether to stop it.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Safe_Rec_Play.lua</source>
+      </version>
     </reapack>
     <reapack name="BSK_Transport_Safe_Rec_Pause.lua" type="script" desc="BSK Transport: Safe Rec Pause">
       <metadata>
@@ -16,12 +21,22 @@
       <version name="1.0" author="BSK Apps" time="2026-06-16T10:50:09Z">
         <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Safe_Rec_Pause.lua</source>
       </version>
+      <version name="1.1" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[Pressing it again while it runs no longer asks whether to stop it.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Safe_Rec_Pause.lua</source>
+      </version>
     </reapack>
     <reapack name="BSK_Transport_Safe_Rec_Record.lua" type="script" desc="BSK Transport: Safe Rec Record">
       <metadata>
         <description><![CDATA[Starts recording only if not already recording. Safe for Stream Deck transport buttons.]]></description>
       </metadata>
       <version name="1.0" author="BSK Apps" time="2026-06-16T10:50:09Z">
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Safe_Rec_Record.lua</source>
+      </version>
+      <version name="1.1" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[After it starts recording, every track is unselected, so a fader or mute you touch mid-show moves only that track.
+Says why it cannot record when the audio device is not running, instead of doing nothing.
+Pressing it again while it runs no longer asks whether to stop it.]]></changelog>
         <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Transport_Safe_Rec_Record.lua</source>
       </version>
     </reapack>
@@ -34,12 +49,37 @@
       <version name="1.0" author="BSK Apps" time="2026-06-16T10:50:09Z">
         <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Import_Track_Names.lua</source>
       </version>
+      <version name="1.1" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[Shows the names it found before it changes anything.
+Refuses to run while recording.
+In console exports, blank rows keep their place, so the names below them no longer shift up.
+Accented names from Mac exports come through correctly.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Import_Track_Names.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BSK_AutoName_From_Inputs.lua" type="script" desc="BSK Auto-name: Tracks from Device Inputs">
+      <metadata>
+        <description><![CDATA[Names each track from the input label your audio interface reports for its input. Shows the names first and applies them only after you confirm. If your interface has no labels, use Import Track Names instead.]]></description>
+      </metadata>
+      <version name="1.2" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[First release on ReaPack.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoName_From_Inputs.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BSK_Colour_Tracks_By_Name.lua" type="script" desc="BSK Auto Color: Colour Tracks by Name">
+      <metadata>
+        <description><![CDATA[Opens the Auto Color window: groups of words (vocals, drums, bass, guitars and more) each with a colour and an optional icon. Apply to Tracks colours every track whose name has one of a group's words. Edit, add or remove groups to suit your desk. One undo.]]></description>
+      </metadata>
+      <version name="2.0" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[First release on ReaPack.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Colour_Tracks_By_Name.lua</source>
+      </version>
     </reapack>
   </category>
   <category name="AutoPatch">
     <reapack name="BSK_AutoPatch_HW_1to1_Mono.lua" type="script" desc="BSK AutoPatch: HW 1-to-1 Mono">
       <metadata>
-        <description><![CDATA[Patches all tracks 1:1 to mono hardware inputs and outputs. Sets pre-FX sends at unity gain, disables master send and monitoring. Shows a summary when done. Mono tracks only. A stereo source needs two mono tracks (left and right).]]></description>
+        <description><![CDATA[Patches every track 1:1 to mono hardware inputs and outputs: track 1 to input 1 and output 1, and so on. Tracks past what your interface has keep what they have. For stereo tracks use BSK AutoPatch: HW 1-to-1 Mono and Stereo.]]></description>
       </metadata>
       <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
         <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_1to1_Mono.lua</source>
@@ -53,13 +93,51 @@
 While recording, it now refuses to run instead of repatching tracks mid-show.]]></changelog>
         <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_1to1_Mono.lua</source>
       </version>
+      <version name="1.3" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[Now patches inputs and outputs only. Pre-FX outputs, monitoring off and master send off moved to BSK AutoRoute: HW Pre FX.
+Before you patch, the box says which tracks your interface has no inputs or outputs for. Those tracks keep what they have.
+Refuses to run while playing.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_1to1_Mono.lua</source>
+      </version>
     </reapack>
     <reapack name="BSK_AutoPatch_HW_Teardown.lua" type="script" desc="BSK AutoPatch: HW Teardown">
       <metadata>
-        <description><![CDATA[Removes all hardware sends and restores master send and monitoring on every track. Undo for AutoPatch.]]></description>
+        <description><![CDATA[Asks first, then removes every track's hardware inputs and outputs and turns master send and record monitoring back on. The opposite of AutoPatch.]]></description>
       </metadata>
       <version name="1.0" author="BSK Apps" time="2026-03-11T10:01:55Z">
         <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_Teardown.lua</source>
+      </version>
+      <version name="1.1" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[Asks before it removes anything.
+Refuses to run while playing or recording.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_Teardown.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BSK_AutoPatch_HW_1to1_Mono_Stereo.lua" type="script" desc="BSK AutoPatch: HW 1-to-1 Mono and Stereo">
+      <metadata>
+        <description><![CDATA[Patches every track 1:1 to hardware inputs and outputs, mono and stereo. Set a track's input to stereo first and it takes the next pair of inputs and outputs; the tracks after it move along. Tracks past what your interface has come out blank (no input or output), so nothing doubles up, and a stereo one comes back stereo on a bigger interface.]]></description>
+      </metadata>
+      <version name="1.0" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[First release.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoPatch_HW_1to1_Mono_Stereo.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BSK_AutoRoute_HW_PreFX.lua" type="script" desc="BSK AutoRoute: HW Pre FX">
+      <metadata>
+        <description><![CDATA[For every track that has a hardware output: outputs pre FX and pre fader, record monitoring off, master send off. Run it after AutoPatch for virtual soundcheck.]]></description>
+      </metadata>
+      <version name="1.0" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[First release.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_AutoRoute_HW_PreFX.lua</source>
+      </version>
+    </reapack>
+    <reapack name="BSK_Reset_Volume_Pan_Outputs.lua" type="script" desc="BSK Reset: Volume, Pan and Outputs">
+      <metadata>
+        <description><![CDATA[Asks first, then sets every track's fader to 0 dB and pan to centre, every hardware output to 0 dB and centre, and every item and take to 0 dB. One undo. Needs the SWS extension.]]></description>
+      </metadata>
+      <version name="1.0" author="BSK Apps" time="2026-10-26T09:30:00Z">
+        <changelog><![CDATA[First release.]]></changelog>
+        <source>https://raw.githubusercontent.com/BSKapps/BSK-Reaper-Scripts-/main/BSK_Reset_Volume_Pan_Outputs.lua</source>
       </version>
     </reapack>
   </category>
